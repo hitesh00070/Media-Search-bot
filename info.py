@@ -16,7 +16,7 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['@Hitesh0007'].split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['678710922'].split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['-1001538461400'].split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -26,7 +26,7 @@ AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_chan
 # MongoDB information
 DATABASE_URI = environ['mongodb+srv://jns4638:jns4638@cluster0.qyh3o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority']
 DATABASE_NAME = environ['cinee']
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'channel_files')
 
 # Messages
 default_start_msg = """
