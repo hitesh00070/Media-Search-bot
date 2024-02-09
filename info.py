@@ -7,8 +7,8 @@ id_pattern = re.compile(r'^.\d+$')
 SESSION = environ.get('SESSION', 'Media_search')
 USER_SESSION = environ.get('USER_SESSION', 'User_Bot')
 API_ID = 4639219
-API_HASH = environ['8aa6ff17490134bf275616030f46e29e']
-BOT_TOKEN = environ['6031547979:AAF1Xx1Nzm_vCXCY85tYCXwsr93As1kYZaA']
+API_HASH = '8aa6ff17490134bf275616030f46e29e'
+BOT_TOKEN = '6031547979:AAF1Xx1Nzm_vCXCY85tYCXwsr93As1kYZaA'
 USERBOT_STRING_SESSION = environ.get('USERBOT_STRING_SESSION')
 
 # Bot settings
@@ -16,7 +16,7 @@ CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ['678710922'].split()]
+ADMINS = 678710922
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['-1001538461400'].split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
