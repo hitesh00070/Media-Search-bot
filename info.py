@@ -17,16 +17,16 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', False))
 
 # Admins, Channels & Users
 ADMINS = 678710922
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ['-1001538461400'].split()]
+CHANNELS = ['-1001538461400']
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
-AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('-1001531025479')
-AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
+AUTH_USERS = []
+auth_channel = environ.get('AUTH_CHANNEL')
+AUTH_CHANNEL = -1001531025479
 
 # MongoDB information
-DATABASE_URI = environ['mongodb+srv://jns4638:jns4638@cluster0.qyh3o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority']
-DATABASE_NAME = environ['cinee']
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'channel_files')
+DATABASE_URI = "mongodb+srv://jns4638:jns4638@cluster0.qyh3o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+DATABASE_NAME = 'cinee'
+COLLECTION_NAME = 'channel_files'
 
 # Messages
 default_start_msg = """
